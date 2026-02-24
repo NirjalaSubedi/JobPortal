@@ -3,8 +3,8 @@ const dotenv=require('dotenv');
 dotenv.config();
 const pool= mysql.createPool({
     host:'localhost',
-    username:'root',
+    user:'root',
     password:'',
-    dbname:'jobPortal'
+    database:'jobportal'
 });
 module.exports=pool.promise();
