@@ -2,6 +2,7 @@ const express = require('express');
 const db = require('./config/db');
 const colors=require('colors');
 const app=express();
+app.use(express.json());
 const checkconnection= async()=>{
     try{
         await db.execute('SELECT 1');
