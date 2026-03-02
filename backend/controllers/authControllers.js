@@ -20,15 +20,11 @@ exports.userRegister=async(req,res)=> {
 //login user
 exports.loginUser=async(req, res)=>{
 
-    console.log("----------------------------");
-    console.log("POSTMAN BATA REQUEST AAYO!!"); // Yo terminal ma print hunaiparchha
-    console.log("Body ma k chha:", req.body);
-    console.log("----------------------------");
 
     try{
         const {email,password}=req.body;
         if(!email || !password){
-            return res.status.json({message:"please provide email and password"})
+            return res.status(400).json({message:"please provide email and password"})
         }
         const [rows]= await db.execute("SELECT * FROM users Where email=?",[email]);
         
