@@ -36,7 +36,7 @@ exports.loginUser=async(req, res)=>{
                 id:user.id,
                 name:user.name,
                 email:user.email,
-                password:email.password
+                role:user.role
             }
 
         })
