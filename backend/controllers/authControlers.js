@@ -17,6 +17,13 @@ exports.userRegister=async(req,res)=> {
         res.status(500).json({message:"User registered unsuccessfully!"});
     }
 }
+//login user
 exports.loginUser=async(req, res)=>{
-    
+    try{
+        const {email,password}=req.body;
+        const [rows]= await db.execute("SELECT * FORM users Where email=?"[email]);
+        
+    }catch(e){
+
+    }
 }
