@@ -21,9 +21,10 @@ exports.userRegister=async(req,res)=> {
 exports.loginUser=async(req, res)=>{
     try{
         const {email,password}=req.body;
-        const [rows]= await db.execute("SELECT * FORM users Where email=?"[email]);
+        const [rows]= await db.execute("SELECT * FROM users Where email=?",[email]);
         if(rows.length===0){
             res.status(404).json({message:"user Not found"});
+            
         }
         const user=rows[0];
         const ismatch=await bcrypt.compare(password,user.password);
