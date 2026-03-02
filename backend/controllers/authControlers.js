@@ -30,6 +30,16 @@ exports.loginUser=async(req, res)=>{
         if(!ismatch){
            return res.status(401).json({message:"yo naam ko user register xaiina"});
         }
+        res.status(200).json({
+            message:"login success",
+            user:{
+                id:user.id,
+                name:user.name,
+                email:user.email,
+                password:email.password
+            }
+
+        })
 
     }catch(e){
         return res.status(500).json({message:e.message});
