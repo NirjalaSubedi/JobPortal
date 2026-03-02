@@ -16,6 +16,11 @@ checkconnection();
 
 const authRoutes = require('./routes/authrouters');
 
+app.use((req, res, next) => {
+    console.log(`${req.method} request aayo: ${req.url}`);
+    next();
+});
+
 app.use('/api/auth', authRoutes);
 
 app.listen(5000, () => {

@@ -33,6 +33,7 @@ exports.loginUser=async(req, res)=>{
 
         }
         const user=rows[0];
+         console.log("Database bata aayeko user data:", user);
         const ismatch=await bcrypt.compare(password,user.password);
         if(!ismatch){
            return res.status(401).json({message:"invalid username and password"});
