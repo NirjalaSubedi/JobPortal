@@ -17,3 +17,6 @@ exports.userRegister=async(req,res)=> {
         res.status(500).json({message:"User registered unsuccessfully!"});
     }
 }
+exports.loginUser=async(req, res)=>{
+    
+}
