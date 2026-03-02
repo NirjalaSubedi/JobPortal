@@ -25,7 +25,13 @@ exports.loginUser=async(req, res)=>{
         if(rows.length===0){
             res.status(404).json({message:"user Not found"});
         }
-    }catch(e){
+        const user=rows[0];
+        const ismatch=await bcrypt.compare(password,user.password);
+        if(!ismatch){
+           return res.status(401).json({message:"yo naam ko user register xaiina"});
+        }
 
+    }catch(e){
+        return res.status(500).json({message:"error in login",e});
     }
 }
