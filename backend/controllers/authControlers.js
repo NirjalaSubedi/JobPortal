@@ -22,7 +22,9 @@ exports.loginUser=async(req, res)=>{
     try{
         const {email,password}=req.body;
         const [rows]= await db.execute("SELECT * FORM users Where email=?"[email]);
-        
+        if(rows.length===0){
+            res.status(404).json({message:"user Not found"});
+        }
     }catch(e){
 
     }
