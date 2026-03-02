@@ -27,7 +27,11 @@ exports.loginUser=async(req, res)=>{
 
     try{
         const {email,password}=req.body;
+        if(!email || !password){
+            return res.status.json({message:"please provide email and password"})
+        }
         const [rows]= await db.execute("SELECT * FROM users Where email=?",[email]);
+        
         if(rows.length===0){
             return res.status(404).json({message:"user Not found"});
 
