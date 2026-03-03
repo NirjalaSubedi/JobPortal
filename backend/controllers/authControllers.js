@@ -55,3 +55,14 @@ exports.loginUser=async(req, res)=>{
         
     }
 }
+
+//json web token
+const jwt = require('jsonwebtoken');
+//password check vayapachii login ma 
+const token=jwt.sign({
+    id:user_id
+}
+
+)
+
+
