@@ -66,7 +66,12 @@ process.env.JWT_SECRET,
 )
 
 //response pathauda token pani pathaune
-res.status(200)
+res.status(200).json({
+    success:"true",
+    message:"user login successfull",
+    token,
+    user
+})
 
 
 
