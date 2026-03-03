@@ -60,9 +60,9 @@ exports.loginUser=async(req, res)=>{
 const jwt = require('jsonwebtoken');
 //password check vayapachii login ma 
 const token=jwt.sign(
-    {id:user._id},
-process.env.JWT_SECRET,
-{expiresIn: process.env.JWT_EXPIRES_IN}
+    {id:user.id},
+    process.env.JWT_SECRET,
+    {expiresIn: process.env.JWT_EXPIRES_IN}
 )
 
 //response pathauda token pani pathaune
