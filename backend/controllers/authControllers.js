@@ -40,8 +40,16 @@ exports.loginUser=async(req, res)=>{
         if(!ismatch){
            return res.status(401).json({message:"invalid username and password"});
         }
+
+        const token=jwt.sign(
+                            {id:user.id},
+                            process.env.JWT_SECRET,
+                            {expiresIn: process.env.JWT_EXPIRES_IN}
+                            )   
         res.status(200).json({
+            success:"true",
             message:"login success",
+            token,
             user:{
                 id:user.id,
                 name:user.name,
@@ -57,21 +65,6 @@ exports.loginUser=async(req, res)=>{
         
     }
 }
-
-//password check vayapachii login ma 
-const token=jwt.sign(
-    {id:user.id},
-    process.env.JWT_SECRET,
-    {expiresIn: process.env.JWT_EXPIRES_IN}
-)
-
-//response pathauda token pani pathaune
-res.status(200).json({
-    success:"true",
-    message:"user login successfull",
-    token,
-    user
-})
 
 
 
