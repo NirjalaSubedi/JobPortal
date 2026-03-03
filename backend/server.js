@@ -1,6 +1,7 @@
 const express = require('express');
 const db = require('./config/db');
 const colors=require('colors');
+require('dotenv').config();
 const app=express();
 app.use(express.json());
 const checkconnection= async()=>{
