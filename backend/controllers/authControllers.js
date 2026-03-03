@@ -1,5 +1,7 @@
 const db= require('../config/db.js');
 const bcrypt=require('bcryptjs');
+const jwt = require('jsonwebtoken');
+
 //Register User
 exports.userRegister=async(req,res)=> {
     try{
@@ -56,8 +58,6 @@ exports.loginUser=async(req, res)=>{
     }
 }
 
-//json web token
-const jwt = require('jsonwebtoken');
 //password check vayapachii login ma 
 const token=jwt.sign(
     {id:user.id},
