@@ -7,11 +7,13 @@ exports.createJob= async(req,res)=>{
         [title,description,company,location,salary,userid])
 
         res.status(201).json({
-            message:"job created success"
+            message:"job created success",
+            jobId: result.insertId
         })
     }catch(error){
         res.status(500).json({
-            message:"job creation failed"
+            message:"job creation failed",
+            error:error.message
         })
     }
 }
