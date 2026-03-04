@@ -12,5 +12,8 @@ router.get('/test-auth',authmiddleware,(req,res)=>{
         userdata:req.user
     })
 })
+
+router.post('/debug-test', (req, res) => res.send("Route working!"));
+
 router.post('/create-job',authmiddleware,createJob);
 module.exports = router;
