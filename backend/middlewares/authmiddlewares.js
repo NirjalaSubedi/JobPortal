@@ -7,10 +7,14 @@ const authmiddleware=async(req,res,next)=>{
                 message:"No Token Authorization Denied "
             })
         }
-        
+        const decoded=jwt.verify(token,process.env.JWT_SECRET)
+        user.req=decoded;
+        next();
 
     }catch(error){
-
+        res.status(401).json({
+            message:"Token not valid"
+        })
     }
 
 }
