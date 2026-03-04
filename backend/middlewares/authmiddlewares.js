@@ -1,15 +1,15 @@
 const jwt=require('jsonwebtoken');
 const authmiddleware=async(req,res,next)=>{
     try{
-        const authheader=req.headers.authorization;
-        if(!authheader||!authheader.startsWith("bearer")){ 
+        const token=req.headers.authorization?.split(" ")[1];
+        if(!token){ 
             return res.status(401).json({
                 message:"No Token Authorization Denied "
             })
         }
-        const token=authheader?.split()[1];
+        
         const decoded=jwt.verify(token,process.env.JWT_SECRET)
-        user.req=decoded;
+        req.user=decoded;
         next();
 
     }catch(error){
@@ -21,3 +21,4 @@ const authmiddleware=async(req,res,next)=>{
 
 }
 module.exports=authmiddleware;
+
