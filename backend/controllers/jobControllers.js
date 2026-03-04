@@ -12,6 +12,7 @@ exports.createJob= async(req,res)=>{
         })
     }catch(error){
         res.status(500).json({
+            success: false,
             message:"job creation failed",
             error:error.message
         })
