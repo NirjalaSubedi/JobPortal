@@ -17,5 +17,5 @@ router.post('/debug-test', (req, res) => res.send("Route working!"));
 
 router.post('/create-job',authmiddleware,createJob);
 router.get('/getjobs',getalljobs);
-router.get('/getsinglejob',getsinglejob);
+router.get('/getsinglejob/:id',getsinglejob);
 module.exports = router;
