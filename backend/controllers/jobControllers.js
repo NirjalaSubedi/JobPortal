@@ -21,7 +21,7 @@ exports.createJob= async(req,res)=>{
 
 exports.getalljobs= async(req,res)=>{
     try{
-        const [jobs]=await db.execute("SELECT * FORM jobs ORDER BY createdAt DESC");
+        const [jobs]=await db.execute("SELECT * FROM jobs ORDER BY createdAt DESC");
         res.status(200).json({
         success:true,
         message:"fetching job details",
@@ -36,3 +36,4 @@ exports.getalljobs= async(req,res)=>{
         })
     }
 }
+
