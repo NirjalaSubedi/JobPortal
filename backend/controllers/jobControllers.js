@@ -24,11 +24,15 @@ exports.getalljobs= async(req,res)=>{
         const [jobs]=await db.execute("SELECT * FORM jobs ORDER BY createdAt DESC");
         res.status(200).json({
         success:true,
-        message:"fetching job details"
+        message:"fetching job details",
+        count:jobs.length,
+        jobs
         })
     }catch(error){
         res.status(500).json({
-            
+            success:false,
+            message:"job fetch garna sakiyana ",
+            error:error.message
         })
     }
 }
