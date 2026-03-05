@@ -2,7 +2,7 @@ const express= require('express');
 const authmiddleware=require('../middlewares/authmiddlewares');
 const router=express.Router();
 const {userRegister,loginUser}= require('../controllers/authControllers');
-const {createJob,getalljobs}=require('../controllers/jobControllers');
+const {createJob,getalljobs,getsinglejob}=require('../controllers/jobControllers');
 
 router.post('/register', userRegister);
 router.post('/login',loginUser);
@@ -17,4 +17,5 @@ router.post('/debug-test', (req, res) => res.send("Route working!"));
 
 router.post('/create-job',authmiddleware,createJob);
 router.get('/getjobs',getalljobs);
+router.get('/getsinglejob',getsinglejob);
 module.exports = router;
