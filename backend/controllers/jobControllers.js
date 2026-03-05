@@ -36,4 +36,11 @@ exports.getalljobs= async(req,res)=>{
         })
     }
 }
+exports.getsinglejob =async (req,res)=>{
+    try{
+        jobid=req.params.id //url bata id leko
+        const [jobs]=await db.execute("SELECT * FROM jobs WHERE id=?",[jobid]);
+    }catch(error){
 
+    }
+}
