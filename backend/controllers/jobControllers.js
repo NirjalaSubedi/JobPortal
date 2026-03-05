@@ -46,8 +46,11 @@ exports.getsinglejob =async (req,res)=>{
                 message:"Job vetiyana"
             })
         }
-        
+        res.status(200).json({
+            success:"true",
+            job:jobs[0]
+        })
     }catch(error){
-
+        
     }
 }
