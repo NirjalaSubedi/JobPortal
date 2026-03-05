@@ -18,3 +18,7 @@ exports.createJob= async(req,res)=>{
         })
     }
 }
+
+exports.getalljobs= async(req,res)=>{
+    
+}
