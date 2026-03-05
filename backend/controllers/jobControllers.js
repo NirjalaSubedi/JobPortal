@@ -51,6 +51,10 @@ exports.getsinglejob =async (req,res)=>{
             job:jobs[0]
         })
     }catch(error){
-        
+        res.status(500).json({
+            success:false,
+            message:"job display ma error aayo",
+            error:error.message
+        })
     }
 }
