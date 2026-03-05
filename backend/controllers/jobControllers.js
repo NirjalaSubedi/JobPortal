@@ -40,6 +40,13 @@ exports.getsinglejob =async (req,res)=>{
     try{
         jobid=req.params.id //url bata id leko
         const [jobs]=await db.execute("SELECT * FROM jobs WHERE id=?",[jobid]);
+        if(jobs.length===0){
+            return res.status(404).json({
+                success:false,
+                message:"Job vetiyana"
+            })
+        }
+        
     }catch(error){
 
     }
