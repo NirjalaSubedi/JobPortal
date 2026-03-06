@@ -1,5 +1,5 @@
 import React from "react";
-import {link} from "react-router-dom";
+import {Link} from "react-router-dom";
 const Navbar = ()=>{
     return(
 <nav style={{
@@ -16,7 +16,7 @@ const Navbar = ()=>{
     }}>
       <div style={{ fontSize: '1.5rem', fontWeight: '800', color: '#fff', letterSpacing: '1px' }}>
         <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
-          ROZGARI<span style={{ color: '#4ade80' }}>HUB</span>
+          Sajilo<span style={{ color: '#4ade80' }}>Rojgar</span>
         </Link>
       </div>
 
