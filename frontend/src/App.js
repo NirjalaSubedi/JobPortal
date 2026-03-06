@@ -8,7 +8,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/login" element={<Login />} />
-        <Route path="/" element={<h1 style={{ textAlign: 'center' }}>Welcome to Job Portal</h1>} />
+       
       </Routes>
     </Router>
   );
