@@ -26,7 +26,7 @@ const Navbar = ()=>{
             textDecoration: 'none',
             color: '#cbd5e1',
             fontWeight: '500',
-            fontSize: '1rem'
+            fontSize:'1.2rem'
           }}>
             {item}
           </Link>

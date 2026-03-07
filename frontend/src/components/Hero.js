@@ -25,8 +25,9 @@ const Hero = ()=>{
                     color: 'white',
                     textAlign: 'center'
                 }}>
-                <h1 style={{ fontSize: '3rem',color:'#4ade80',margin:'0' }}>Find Your Dream Job</h1>
+                <h1 style={{ fontSize:'3rem',color:'#4ade80',margin:'0' }}>Find Your Dream Job</h1>
                 <p style={{opacity: '0.9',fontSize:'1.2 rem',margin: '10px 0 0 0',}}>Thousands of opportunities are waiting for you.</p>
+                <button> Lets Explore</button>
             </div>
         </div>
     )
