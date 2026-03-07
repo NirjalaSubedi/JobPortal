@@ -16,6 +16,18 @@ const Hero = ()=>{
                 filter: 'brightness(70%)'
             }}
             />
+
+            <div style={{
+                    position: 'absolute',
+                    top: '50%',
+                    left: '50%',
+                    transform: 'translate(-50%, -50%)',
+                    color: 'white',
+                    textAlign: 'center'
+                }}>
+                <h1 style={{ fontSize: '3rem' }}>Find Your Dream Job</h1>
+                <p>Thousands of opportunities are waiting for you.</p>
+            </div>
         </div>
     )
 }
