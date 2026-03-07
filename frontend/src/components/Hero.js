@@ -12,8 +12,8 @@ const Hero = ()=>{
             style={{
                 width: '100%',
                 height: '100%',
-                objectFit: 'cover',
-                filter: 'brightness(50%)'
+                objectFit:'cover',
+                filter: 'brightness(30%)'
             }}
             />
 
@@ -25,7 +25,7 @@ const Hero = ()=>{
                     color: 'white',
                     textAlign: 'center'
                 }}>
-                <h1 style={{ fontSize: '3rem' }}>Find Your Dream Job</h1>
+                <h1 style={{ fontSize: '3rem',color:'#4ade80' }}>Find Your Dream Job</h1>
                 <p>Thousands of opportunities are waiting for you.</p>
             </div>
         </div>
