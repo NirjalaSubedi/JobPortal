@@ -9,7 +9,7 @@ const Navbar = ()=>{
       padding: '1rem 5%',
       backgroundColor: 'rgba(45, 62, 80, 0.95)', 
       backdropFilter: 'blur(10px)',
-      position: 'sticky',
+      position:"sticky",
       top: 0,
       zIndex: 1000,
       boxShadow: '0 2px 10px rgba(0,0,0,0.1)'

@@ -13,7 +13,7 @@ const Hero = ()=>{
                 width: '100%',
                 height: '100%',
                 objectFit: 'cover',
-                filter: 'brightness(70%)'
+                filter: 'brightness(50%)'
             }}
             />
 
