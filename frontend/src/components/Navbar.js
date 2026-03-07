@@ -47,7 +47,7 @@ const Navbar = ()=>{
         <Link to="/register" style={{
           textDecoration: 'none',
           color: '#fff',
-          backgroundColor: '#3b82f6', 
+          backgroundColor: '#2ed46b', 
           padding: '0.6rem 1.5rem',
           borderRadius: '8px',
           fontWeight: 'bold',
