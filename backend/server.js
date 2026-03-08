@@ -4,6 +4,8 @@ const colors=require('colors');
 require('dotenv').config();
 const app=express();
 app.use(express.json());
+const cors = require('cors');
+app.use(cors());
 const checkconnection= async()=>{
     try{
         await db.execute('SELECT 1');

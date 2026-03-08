@@ -7,9 +7,11 @@ const JobCategory = () => {
         const fetchcats=async()=>{
             try{
                 const res = await axios.get("http://localhost:5000/api/auth/getjobs");
-                if (res.data.success) 
+                console.log("Backend response:", res.data);
+                if (res.data.success && res.data.jobs) 
                 {
                     const unique = [...new Set(res.data.jobs.map(job => job.category))];
+                    console.log("Unique Categories:", unique);
                     setcategories(unique);
                 }
             }catch(error){
