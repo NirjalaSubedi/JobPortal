@@ -10,7 +10,7 @@ const JobCategory = () => {
                 if (res.data.success) 
                 {
                     const unique = [...new Set(res.data.jobs.map(job => job.category))];
-                    setCategories(unique);
+                    setcategories(unique);
                 }
             }catch(error){
                 console.log("Error fetching categories",error);
