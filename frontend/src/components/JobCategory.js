@@ -1,5 +1,15 @@
 const JobCategory = () => {
   const cats=['IT & Software','HealthCare','Banking','Design','marketing'];
+  return(
+    <div style={{ padding: '50px 5%', textAlign: 'center', backgroundColor: '#f8fafc' }}>
+      <h2 style={{ color: '#2d3e50', marginBottom: '30px' }}>Explore by Category</h2>
+      <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}>
+        {cats.map(cat => (
+          <div key={cat} style={cardStyle}>{cat}</div>
+        ))}
+      </div>
+    </div>
+  )
 
 };
 const cardStyle = {
