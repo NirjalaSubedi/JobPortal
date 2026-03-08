@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 const JobCategory = () => {
 
+    const [categories, setcategories]=useState([]);
     
+
   const cats=['IT & Software','HealthCare','Banking','Design','marketing'];
   return(
    <div style={{ padding: '50px 5%', textAlign: 'center', backgroundColor: '#f8fafc' }}>
