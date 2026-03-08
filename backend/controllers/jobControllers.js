@@ -1,10 +1,14 @@
 const db = require("../config/db");
 exports.createJob= async(req,res)=>{
     try{
-       const {title,description,company,location,salary} = req.body;
+       const {title,category,description,company,location,salary} = req.body;
+       //error checking 
+       console.log("User ID from Middleware:", req.user ? req.user.id : "No User ID found");
+        console.log("Body Data:", req.body);
+        
        const userid=req.user.id;
-       const [result]= await db.execute("INSERT INTO jobs(title,description,company,location,salary,createdBy) VALUES(?,?,?,?,?,?)",
-        [title,description,company,location,salary,userid])
+       const [result]= await db.execute("INSERT INTO jobs(title,category,description,company,location,salary,createdBy) VALUES(?,?,?,?,?,?,?)",
+        [title,category,description,company,location,salary,userid])
 
         res.status(201).json({
             message:"job created success",
