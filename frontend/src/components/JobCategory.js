@@ -4,15 +4,20 @@ const JobCategory = () => {
 
     const [categories, setcategories]=useState([]);
     useEffect(()=>{
-        const fatchcats=async()=>{
+        const fetchcats=async()=>{
             try{
                 const res = await axios.get("http://localhost:5000/api/auth/getjobs");
-                
+                if (res.data.success) 
+                {
+                    const unique = [...new Set(res.data.jobs.map(job => job.category))];
+                    setCategories(unique);
+                }
             }catch(error){
-
+                console.log("Error fetching categories",error);
             }
         }
-    })
+        fetchcats();
+    },[])
 
 
   const cats=['IT & Software','HealthCare','Banking','Design','marketing'];
