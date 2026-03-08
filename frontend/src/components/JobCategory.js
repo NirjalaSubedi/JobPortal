@@ -3,7 +3,17 @@ import axios from 'axios';
 const JobCategory = () => {
 
     const [categories, setcategories]=useState([]);
-    
+    useEffect(()=>{
+        const fatchcats=async()=>{
+            try{
+                const res = await axios.get("http://localhost:5000/api/auth/getjobs");
+                
+            }catch(error){
+
+            }
+        }
+    })
+
 
   const cats=['IT & Software','HealthCare','Banking','Design','marketing'];
   return(
