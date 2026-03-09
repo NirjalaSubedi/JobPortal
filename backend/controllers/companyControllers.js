@@ -10,7 +10,11 @@ exports.createcompany=async(req,res)=>{
             companyid:result.insertId
         })
     }catch(error){
-
+        res.staus(500).json({
+            success:false,
+            message:"company add garda error aayo",
+            error:error.message
+        })
     }
 
 }
