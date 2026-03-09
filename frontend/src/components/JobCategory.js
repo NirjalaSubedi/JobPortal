@@ -1,8 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { LayoutGrid, Monitor, HeartPulse, Landmark, PenTool, Speaker } from 'lucide-react';
 const JobCategory = () => {
 
     const [categories, setcategories]=useState([]);
+
+    const getIcon = (cat) => {
+        const lowerCat = cat.toLowerCase();
+        if (lowerCat.includes('it') || lowerCat.includes('software')) return <Monitor size={24} />;
+        if (lowerCat.includes('health')) return <HeartPulse size={24} />;
+        if (lowerCat.includes('bank')) return <Landmark size={24} />;
+        if (lowerCat.includes('design')) return <PenTool size={24} />;
+        if (lowerCat.includes('marketing')) return <Speaker size={24} />;
+        return <LayoutGrid size={24} />; // Default icon
+    };
     useEffect(()=>{
         const fetchcats=async()=>{
             try{
