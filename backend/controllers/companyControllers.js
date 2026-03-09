@@ -12,7 +12,7 @@ exports.createcompany=async(req,res)=>{
     }catch(error){
         res.status(500).json({
             success:false,
-            message:"company add garda error aayo",
+            message:"company create garna sakiyana",
             error:error.message
         })
     }
