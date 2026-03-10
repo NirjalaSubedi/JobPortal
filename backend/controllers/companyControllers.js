@@ -23,6 +23,10 @@ exports.fetchcompany=async(req,res)=>{
     try{
 
     }catch(error){
-        
+        res.status(500).json({
+            success:false,
+            message:"company fetch garna sakiyana",
+            error:error.message
+        })
     }
 }
