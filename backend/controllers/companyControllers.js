@@ -21,6 +21,14 @@ exports.createcompany=async(req,res)=>{
 
 exports.fetchcompany=async(req,res)=>{
     try{
+        const [companies]=await db.execute("");
+        res.status(200).json({
+            success:true,
+            message:"companies fetch garna success vayo",
+            count:companies.length,
+            companies
+
+        })
 
     }catch(error){
         res.status(500).json({
