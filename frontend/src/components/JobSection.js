@@ -94,12 +94,12 @@ const logoImageStyle = { width: '100%', height: '100%', objectFit: 'contain' };
 const companyText = { color: '#64748b', fontSize: '14px', marginBottom: '5px' };
 const jobTitle = { fontSize: '20px', fontWeight: 'bold', color: '#1e293b', marginBottom: '15px' };
 const infoRow = { display: 'flex', justifyContent: 'center', gap: '10px', color: '#94a3b8', fontSize: '13px', marginBottom: '15px' };
-const salaryText = { color: '#4f46e5', fontWeight: 'bold', fontSize: '18px', marginBottom: '15px' };
+const salaryText = { color: '#2ed46b', fontWeight: 'bold', fontSize: '18px', marginBottom: '15px' };
 const tagStyle = { backgroundColor: '#f1f5f9', padding: '5px 12px', borderRadius: '8px', fontSize: '12px', color: '#64748b' };
 const divider = { border: '0', borderTop: '1px solid #f1f5f9', margin: '20px 0' };
 const footerRow = { display: 'flex', justifyContent: 'space-between', alignItems: 'center' };
 const timeText = { display: 'flex', alignItems: 'center', gap: '5px', color: '#94a3b8', fontSize: '12px' };
-const applyBtn = { backgroundColor: '#4f46e5', color: 'white', border: 'none', padding: '10px 18px', borderRadius: '12px', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', fontWeight: '600' };
+const applyBtn = { backgroundColor: '#2ed46b', color: 'white', border: 'none', padding: '10px 18px', borderRadius: '12px', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', fontWeight: '600' };
 
 
 const infoItem = {
