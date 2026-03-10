@@ -25,7 +25,7 @@ exports.createJob= async(req,res)=>{
 
 exports.getalljobs= async(req,res)=>{
     try{
-        const [jobs]=await db.execute("SELECT * FROM jobs ORDER BY createdAt DESC");
+        const [jobs]=await db.execute("SELECT j.*, c.name as company_name, c.logo_url FROM jobs j JOIN companies c ON j.companyId = c.id");
         res.status(200).json({
         success:true,
         message:"fetching job details",
