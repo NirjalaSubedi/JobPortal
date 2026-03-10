@@ -6,11 +6,15 @@ const Companies=()=>{
     useEffect(()=>{
         const fetchcompany= async ()=>{
             try{
-                const res = await axios.get("http://localhost:5000/api/auth/getjobs");
+                const res = await axios.get("http://localhost:5000/api/auth/fetchcompany");
+                if (res.data.success) {
+                    setcompanies(res.data.companies);
+                }
             }catch(error){
-
+                console.log("error on fetching company",error);
             }
         }
-    })
+        fetchcompany();
+    },[])
 }
 export default Companies;
