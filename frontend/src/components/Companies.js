@@ -17,6 +17,30 @@ const CompanySection = () => {
         };
         fetchCompanies();
     }, []);
+    return(
+        <div>
+            <p>Trusted By Landing Companies</p>
+            <div>
+                {companies.length > 0 ? (
+                    companies.map((company) => (
+                        <div key={company.id} style={logoWrapper} title={company.name}>
+                            <img 
+                                src={company.logo_url && company.logo_url.includes('http') 
+                                     ? company.logo_url 
+                                     : "https://via.placeholder.com/150x50?text=Company"} 
+                                alt={company.name} 
+                                style={logoStyle} 
+                            />
+                        </div>
+                    ))
+                ) : (
+                    <p style={{color: '#94a3b8'}}>No companies found.</p>
+                )}
+            </div>
+        </div>
+
+    )
 }
+
 
 export default CompanySection;
