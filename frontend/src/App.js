@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Login from './pages/Login';
 import Hero from './components/Hero';
 import JobCategory from './components/JobCategory'
+import JobSection from './components/JobSection'; 
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Navbar />
       <Hero/>
       <JobCategory/>
+      <JobSection/>
 
       <Routes>
         <Route path="/login" element={<Login />} />

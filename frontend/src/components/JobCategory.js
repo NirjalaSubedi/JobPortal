@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { LayoutGrid, Monitor, HeartPulse, Landmark, PenTool, Speaker } from 'lucide-react'; // Category icons
-
+import {MapPin, Briefcase,Clock,ArrowRight} from 'lucide-react';
 const JobCategory = () => {
   const [categories, setCategories] = useState([]);
 
