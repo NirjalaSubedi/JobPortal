@@ -42,7 +42,7 @@ exports.fetchsinglecompany=async(req,res)=>{
     try{
         companyid= req.params.id;
         const [companies]=await db.execute("SELECT * FROM companies WHERE id=?",[companyid]);
-        if(companyid.length===0){
+        if(companies.length===0){
             return res.status(404).json({
                 success:false,
                 message:"company vetiyana"
