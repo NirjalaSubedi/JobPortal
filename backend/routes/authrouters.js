@@ -3,7 +3,7 @@ const authmiddleware=require('../middlewares/authmiddlewares');
 const router=express.Router();
 const {userRegister,loginUser}= require('../controllers/authControllers');
 const {createJob,getalljobs,getsinglejob}=require('../controllers/jobControllers');
-const {createcompany,fetchcompany}=require('../controllers/companyControllers');
+const {createcompany,fetchcompany,}=require('../controllers/companyControllers');
 
 router.post('/register', userRegister);
 router.post('/login',loginUser);

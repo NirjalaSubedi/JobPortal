@@ -21,17 +21,12 @@ exports.createcompany=async(req,res)=>{
 
 exports.fetchcompany=async(req,res)=>{
     try{
-        companyid=req.params.id
-        const [companies]=await db.execute("SELECT * FROM companies WHERE id=?",[companyid]);
-        if(companies.length===0){
-            return res.status(404).json({
-                success:false,
-                message:"company vetiyana"
-            })
-        }
+        const [companies]=await db.execute("SELECT * FROM companies ORDER BY id DESC");
         res.status(200).json({
             success:true,
-            companies:companies[0]
+            message:"companies fetch garna success vayo",
+            count:companies.length,
+            companies
 
         })
 
@@ -45,12 +40,17 @@ exports.fetchcompany=async(req,res)=>{
 }
 exports.fetchsinglecompany=async(req,res)=>{
     try{
-        const [companies]=await db.execute("SELECT * FROM companies ORDER BY id DESC");
+        companyid= req.params.id;
+        const [companies]=await db.execute("SELECT * FROM companies WHERE id=?",[companyid]);
+        if(companyid.length===0){
+            return res.status(404).json({
+                success:false,
+                message:"company vetiyana"
+            })
+        }
         res.status(200).json({
             success:true,
-            message:"companies fetch garna success vayo",
-            count:companies.length,
-            companies
+            companies:companies[0]
 
         })
 
