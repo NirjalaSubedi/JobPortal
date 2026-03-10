@@ -1,32 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import {MapPin, Briefcase,Clock,ArrowRight} from 'lucide-react';
-const JobCategory = () => {
-  const [categories, setCategories] = useState([]);
+import { MapPin, Briefcase, Clock, ArrowRight } from 'lucide-react';
 
-    const getIcon = (cat) => {
-        const lowerCat = cat.toLowerCase();
-        if (lowerCat.includes('it') || lowerCat.includes('software')) return <Monitor size={24} />;
-        if (lowerCat.includes('health')) return <HeartPulse size={24} />;
-        if (lowerCat.includes('bank')) return <Landmark size={24} />;
-        if (lowerCat.includes('design')) return <PenTool size={24} />;
-        if (lowerCat.includes('marketing')) return <Speaker size={24} />;
-        return <LayoutGrid size={24} />; // Default icon
-    };
+const JobSection = () => {
+    const [jobs, setJobs] = useState([]);
 
     useEffect(() => {
-        const fetchcats = async () => {
+        const fetchJobs = async () => {
             try {
                 const res = await axios.get("http://localhost:5000/api/auth/getjobs");
-                if (res.data.success && res.data.jobs) {
-                    const unique = [...new Set(res.data.jobs.map(job => job.category))];
-                    setCategories(unique);
+                if (res.data.success) {
+                    setJobs(res.data.jobs);
                 }
             } catch (error) {
-                console.log("Error fetching categories", error);
+                console.log("Error fetching jobs", error);
             }
-        }
-        fetchcats();
+        };
+        fetchJobs();
     }, []);
 
     return (
