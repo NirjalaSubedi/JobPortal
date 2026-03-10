@@ -1,20 +1,22 @@
-import react from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useEffect, useState } from 'react';
-const Companies=()=>{
-    const {companies, setcompanies}=useState([]);
-    useEffect(()=>{
-        const fetchcompany= async ()=>{
-            try{
+
+const CompanySection = () => {
+    const [companies, setCompanies] = useState([]);
+
+    useEffect(() => {
+        const fetchCompanies = async () => {
+            try {
                 const res = await axios.get("http://localhost:5000/api/auth/fetchcompany");
                 if (res.data.success) {
-                    setcompanies(res.data.companies);
+                    setCompanies(res.data.companies);
                 }
-            }catch(error){
-                console.log("error on fetching company",error);
+            } catch (err) {
+                console.log("Error fetching companies:", err);
             }
-        }
-        fetchcompany();
-    },[])
+        };
+        fetchCompanies();
+    }, []);
 }
-export default Companies;
+
+export default CompanySection;
