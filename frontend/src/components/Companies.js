@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import axios from 'axios';
+import { useState, useEffect } from 'react';
 
-const CompanySection = () => {
+const Companies = () => {
     const [companies, setCompanies] = useState([]);
 
     useEffect(() => {
@@ -18,9 +19,9 @@ const CompanySection = () => {
         fetchCompanies();
     }, []);
     return(
-        <div>
-            <p>Trusted By Landing Companies</p>
-            <div>
+        <div style={sectionWrapper}>
+            <p style={subTitle}>Trusted by Leading Companies</p>
+            <div style={logoRow}>
                 {companies.length > 0 ? (
                     companies.map((company) => (
                         <div key={company.id} style={logoWrapper} title={company.name}>
@@ -83,4 +84,4 @@ const logoStyle = {
 };
 
 
-export default CompanySection;
+export default Companies;
