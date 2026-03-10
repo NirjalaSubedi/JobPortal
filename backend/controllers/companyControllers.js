@@ -18,3 +18,11 @@ exports.createcompany=async(req,res)=>{
     }
 
 }
+
+exports.fetchcompany=async(req,res)=>{
+    try{
+
+    }catch(error){
+        
+    }
+}

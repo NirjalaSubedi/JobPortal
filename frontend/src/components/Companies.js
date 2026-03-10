@@ -6,7 +6,7 @@ const Companies=()=>{
     useEffect(()=>{
         const fetchcompany= async ()=>{
             try{
-
+                const res = await axios.get("http://localhost:5000/api/auth/getjobs");
             }catch(error){
 
             }
