@@ -23,11 +23,15 @@ exports.fetchcompany=async(req,res)=>{
     try{
         companyid=req.params.id
         const [companies]=await db.execute("SELECT * FROM companies WHERE id=?",[companyid]);
+        if(companies.length===0){
+            return res.status(404).json({
+                success:false,
+                message:"company vetiyana"
+            })
+        }
         res.status(200).json({
             success:true,
-            message:"companies fetch garna success vayo",
-            count:companies.length,
-            companies
+            companies:companies[0]
 
         })
 
