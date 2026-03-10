@@ -3,7 +3,6 @@ import './index.css';
 import Navbar from './components/Navbar';
 import Login from './pages/Login';
 import Hero from './components/Hero';
-import JobCategory from './components/JobCategory'
 import JobSection from './components/JobSection'; 
 
 function App() {
@@ -11,7 +10,6 @@ function App() {
     <Router>
       <Navbar />
       <Hero/>
-      <JobCategory/>
       <JobSection/>
 
       <Routes>
