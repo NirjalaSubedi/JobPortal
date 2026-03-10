@@ -8,8 +8,9 @@ const Companies=()=>{
             try{
 
             }catch(error){
-                
+
             }
         }
     })
 }
+export default Companies;

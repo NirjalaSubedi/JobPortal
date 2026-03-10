@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Login from './pages/Login';
 import Hero from './components/Hero';
 import JobSection from './components/JobSection'; 
+import Companies from './components/Companies';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Navbar />
       <Hero/>
       <JobSection/>
+      <Companies/>
 
       <Routes>
         <Route path="/login" element={<Login />} />
