@@ -9,7 +9,7 @@
 .marquee-track {
     display: flex;
     gap: 100px; 
-    animation: scrollLogos 20s linear infinite;
+    animation: scrollLogos 30s linear infinite;
     white-space: nowrap;
 }
 
@@ -35,6 +35,6 @@
 
 
 @keyframes scrollLogos {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-33.33%); } 
+    0% { transform: translateX(-33.33%); }
+    100% { transform: translateX(0); } 
 }
