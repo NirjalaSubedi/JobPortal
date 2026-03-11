@@ -5,6 +5,7 @@ import Login from './pages/Login';
 import Hero from './components/Hero';
 import JobSection from './components/JobSection'; 
 import Companies from './components/Companies';
+import About from './components/About';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Hero/>
       <JobSection/>
       <Companies/>
+      <About/>
 
       <Routes>
         <Route path="/login" element={<Login />} />
