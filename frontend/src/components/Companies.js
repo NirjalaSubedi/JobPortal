@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
-import './Companies.css';
+import './style/Companies.css';
 
 const Companies = () => {
     const [companies, setCompanies] = useState([]);
