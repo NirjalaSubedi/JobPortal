@@ -24,6 +24,14 @@ const Footer =()=>{
                             <li><a href="/about">About Us</a></li>
                         </ul>
                     </div>
+                    <div className="footer-col">
+                        <h3>Contact Support</h3>
+                        <div className="contact-info">
+                            <p><FaMapMarkerAlt /> Itahari, Koshi Province, Nepal</p>
+                            <p><FaPhoneAlt /> +977 98XXXXXXXX</p>
+                            <p><FaEnvelope /> support@sajilorojgar.com</p>
+                            </div>
+                        </div>
                 </div>
             </div>
         </footer>
