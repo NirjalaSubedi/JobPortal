@@ -15,6 +15,15 @@ const Footer =()=>{
                             <a href="#"><FaInstagram /></a>
                         </div>
                     </div>
+                    <div className="footer-col">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/jobs">Find Jobs</a></li>
+                            <li><a href="/companies">Companies</a></li>
+                            <li><a href="/about">About Us</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </footer>
