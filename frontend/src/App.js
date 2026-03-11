@@ -6,6 +6,7 @@ import Hero from './components/Hero';
 import JobSection from './components/JobSection'; 
 import Companies from './components/Companies';
 import About from './components/About';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <JobSection/>
       <Companies/>
       <About/>
+      <Footer/>
 
       <Routes>
         <Route path="/login" element={<Login />} />
