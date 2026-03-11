@@ -34,6 +34,13 @@ const Footer =()=>{
                         </div>
                 </div>
             </div>
+            <div className="footer-bottom">
+                <p>&copy; {new Date().getFullYear()} SajiloRojgar. All rights reserved.</p>
+                <div className="footer-terms">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
         </footer>
     )
 }
