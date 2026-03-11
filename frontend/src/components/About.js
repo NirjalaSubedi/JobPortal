@@ -41,7 +41,7 @@ const About = () => {
             </div>
 
             <div className="mission-section">
-                <h2>Why Choose SajiloRojgar?</h2>
+                <h2>Why Choose <span className="highlight">SajiloRojgar ?</span></h2>
                 <div className="mission-grid">
                     <div className="mission-card">
                         <i className="fas fa-search"></i>
