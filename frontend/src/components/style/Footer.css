@@ -110,3 +110,13 @@
     margin-left: 20px;
 }
 
+/* Responsive design */
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .brand-col p { margin: 0 auto 25px; }
+    .social-icons { justify-content: center; }
+    .footer-bottom { flex-direction: column; gap: 15px; }
+}
