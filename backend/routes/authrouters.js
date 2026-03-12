@@ -22,5 +22,5 @@ router.get('/getsinglejob/:id',getsinglejob);
 router.post('/createcompany',createcompany);
 router.get('/fetchcompany',fetchcompany);
 router.get('/fetchsinglecompany/:id',fetchsinglecompany);
-router.get('/updateCompany/:id',updateCompany)
+router.patch('/updateCompany/:id',updateCompany)
 module.exports = router;
