@@ -156,17 +156,3 @@ input:focus {
     background-color: #f8fafc;
     border-color: #cbd5e1;
 }
-
-.google-btn svg {
-    color: #ea4335; 
-}
-
-.apple-btn {
-    background-color: #000;
-    color: #fff;
-    border: none;
-}
-
-.apple-btn:hover {
-    background-color: #1e293b;
-}

@@ -1,5 +1,5 @@
 import react from 'react';
-import { Mail, Lock,Apple} from 'lucide-react';
+import { Mail, Lock} from 'lucide-react';
 import './style/Login.css';
 const Login = ()=>{
     const GoogleIcon = () => (
@@ -48,9 +48,6 @@ const Login = ()=>{
             <div className='social-login-container'>
                 <button className='social-btn google-btn'>
                     <GoogleIcon/> Continue with Google
-                </button>
-                <button className='social-btn apple-btn'>
-                    <Apple size={20} /> Continue with Apple ID
                 </button>
             </div>
             <div className='signuptext'>
