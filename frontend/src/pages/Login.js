@@ -1,4 +1,5 @@
 import react from 'react';
+import { Mail, Lock} from 'lucide-react';
 const Login = ()=>{
     return(
         <div className='Maincontainer'>
