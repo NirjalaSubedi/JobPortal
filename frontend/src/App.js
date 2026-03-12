@@ -8,17 +8,24 @@ import Companies from './components/Companies';
 import About from './components/About';
 import Footer from './components/Footer';
 
-function App() {
-  return (
-    <Router>
+const Homepage=()=>{
+  return(
+    <>
       <Navbar />
       <Hero/>
       <JobSection/>
       <Companies/>
       <About/>
       <Footer/>
+    </>
+  )
+}
 
+function App() {
+  return (
+    <Router>
       <Routes>
+        <Route path="/" element={<Homepage/>}></Route>
         <Route path="/login" element={<Login />} />
        
       </Routes>
