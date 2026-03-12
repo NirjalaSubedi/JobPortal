@@ -47,7 +47,7 @@ const Login = ()=>{
             </div>
             <div className='social-login-container'>
                 <button className='social-btn google-btn'>
-                    <Chrome size={20} /> Continue with Google
+                    <GoogleIcon/> Continue with Google
                 </button>
                 <button className='social-btn apple-btn'>
                     <Apple size={20} /> Continue with Apple ID
