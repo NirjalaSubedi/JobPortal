@@ -25,5 +25,6 @@ router.post('/createcompany',createcompany);
 router.get('/fetchcompany',fetchcompany);
 router.get('/fetchsinglecompany/:id',fetchsinglecompany);
 router.patch('/updateCompany/:id',updateCompany);
+router.delete('/deletecompany/:id',)
 
 module.exports = router;
