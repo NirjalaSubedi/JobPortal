@@ -15,12 +15,15 @@ router.get('/test-auth',authmiddleware,(req,res)=>{
 })
 
 router.post('/debug-test', (req, res) => res.send("Route working!"));
-
+//job api
 router.post('/create-job',authmiddleware,createJob);
 router.get('/getjobs',getalljobs);
 router.get('/getsinglejob/:id',getsinglejob);
+
+//company api
 router.post('/createcompany',createcompany);
 router.get('/fetchcompany',fetchcompany);
 router.get('/fetchsinglecompany/:id',fetchsinglecompany);
-router.patch('/updateCompany/:id',updateCompany)
+router.patch('/updateCompany/:id',updateCompany);
+
 module.exports = router;

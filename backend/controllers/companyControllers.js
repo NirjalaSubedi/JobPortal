@@ -66,7 +66,7 @@ exports.updateCompany=async(req,res)=>{
     try{
         const companyid=req.params.id;
         const {name,logo_url,website,location,description}=req.body;
-        const [result] = await db.execute("UPDATE companies SET name=?,logo_url=?,website=?,location=?, description=?",[name,logo_url,website,location,description]);
+        const [result] = await db.execute("UPDATE companies SET name=?,logo_url=?,website=?,location=?, description=? WHERE id=?",[name,logo_url,website,location,description,companyid]);
         if(result.affectedRows===0){
             res.status(404).json({
                 success:false,
