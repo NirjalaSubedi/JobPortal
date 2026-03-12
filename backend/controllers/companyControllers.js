@@ -62,3 +62,16 @@ exports.fetchsinglecompany=async(req,res)=>{
         })
     }
 }
+exports.updateCompany=async(req,res)=>{
+    try{
+        const companyid=req.params.id;
+        const {name,logo_url,website,location,description}=req.body;
+        const companies = await db.execute("UPDATE companies SET name=?  ")
+    }catch(error){
+        res.status(500).json({
+            success:false,
+            message:"companies ko data update garna sakiyana",
+            error:error.message
+        })
+    }
+}
