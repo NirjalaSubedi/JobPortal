@@ -1,5 +1,6 @@
 import react from 'react';
 import { Mail, Lock} from 'lucide-react';
+import './style/Login.css';
 const Login = ()=>{
     return(
         <div className='Maincontainer'>
@@ -7,21 +8,30 @@ const Login = ()=>{
                 <h1>sajilo<span className='highlight'>Rojgar</span></h1>
                 <p>Please login using the form below</p>
             </div>
-            <div className='email'>
-                Email
-                <input type="email"/>
+            <div className='input-group'>
+                <label>Email</label>
+                <div className="input-wrapper">
+                    <Mail className="input-icon" size={18} />
+                    <input type="email" placeholder="Enter your email" />
+                </div>
             </div>
-            <div className='password'>
-                password
-                <input type="password"/>
+
+            <div className='input-group'>
+                <label>Password</label>
+                <div className="input-wrapper">
+                    <Lock className="input-icon" size={18} />
+                    <input type="password" placeholder="Enter your password" />
+                </div>
             </div>
+
             <div className='rememberme'>
-                <input type="checkbox"/>
-                Remember Me
+                <input type="checkbox" id="remember" />
+                <label htmlFor="remember">Remember Me</label>
             </div>
-            <div className='login-btn'>
-                <input type="submit"/>
-            </div>
+
+            <button type="submit" className='login-btn'>
+                Login
+            </button>
             <div className='divider'>
                 <p></p>
                 <p>Or</p>
