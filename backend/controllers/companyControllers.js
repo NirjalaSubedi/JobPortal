@@ -96,17 +96,17 @@ exports.updateCompany=async(req,res)=>{
 exports.detelecompany=async (req,res)=>{
     try{
     const companyid=req.params.id;
-    const [result]= await db.execute("DELETE companies WHERE id=?",[companyid]);
-    if(result.affectedRows===0){
-        return res.status(404).json({
-            success:false,
-            message:" haleko id delete garna ko lagi vetiyana",
-        })
-    }
-    res.status(200).json({
+    const [result]= await db.execute("DELETE FROM companies WHERE id=?",[companyid]);
+    if(result.affectedRows>0){
+        return res.json({
         success:true,
         message:"company deleted success"
     })
+    }
+    res.status(404).json({
+            success:false,
+            message:" haleko id delete garna ko lagi vetiyana",
+        })
     }catch(error){
         res.status(500).json({
             success:false,
