@@ -1,4 +1,5 @@
 const db= require ('../config/db');
+//for company creation
 exports.createcompany=async(req,res)=>{
     try{
         const{name,logo_url,website,location,description}=req.body;
@@ -18,7 +19,7 @@ exports.createcompany=async(req,res)=>{
     }
 
 }
-
+//to fetch all company details
 exports.fetchcompany=async(req,res)=>{
     try{
         const [companies]=await db.execute("SELECT * FROM companies ORDER BY id DESC");
@@ -38,6 +39,8 @@ exports.fetchcompany=async(req,res)=>{
         })
     }
 }
+
+//to fetch single company  details
 exports.fetchsinglecompany=async(req,res)=>{
     try{
         companyid= req.params.id;
@@ -62,6 +65,8 @@ exports.fetchsinglecompany=async(req,res)=>{
         })
     }
 }
+
+//to update company details
 exports.updateCompany=async(req,res)=>{
     try{
         const companyid=req.params.id;
@@ -85,4 +90,20 @@ exports.updateCompany=async(req,res)=>{
             error:error.message
         })
     }
+}
+
+//delete company details
+exports.detelecompany=async (req,res)=>{
+    const companyid=req.params.id;
+    const [result]= await db.execute("DELETE companies WHERE id=?",[companyid]);
+    if(result.affectedRows===0){
+        return res.status(404).json({
+            success:false,
+            message:" haleko id delete garna ko lagi vetiyana",
+        })
+    }
+    res.status(200).json({
+        success:true,
+        message:"company deleted success"
+    })
 }
