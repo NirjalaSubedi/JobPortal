@@ -18,7 +18,9 @@ const Login = ()=>{
                 <input type="checkbox"/>
                 Remember Me
             </div>
-            
+            <div className='login-btn'>
+                <input type="submit"/>
+            </div>
 
 
         </div>
