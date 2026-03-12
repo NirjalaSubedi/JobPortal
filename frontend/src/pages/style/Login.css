@@ -127,3 +127,46 @@ input:focus {
 .signuptext span:hover {
     text-decoration: underline;
 }
+
+.social-login-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.social-btn {
+    width: 100%;
+    padding: 10px;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 8px;
+    background: white;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    color: #1e293b;
+}
+
+.social-btn:hover {
+    background-color: #f8fafc;
+    border-color: #cbd5e1;
+}
+
+.google-btn svg {
+    color: #ea4335; 
+}
+
+.apple-btn {
+    background-color: #000;
+    color: #fff;
+    border: none;
+}
+
+.apple-btn:hover {
+    background-color: #1e293b;
+}
