@@ -21,6 +21,11 @@ const Login = ()=>{
             <div className='login-btn'>
                 <input type="submit"/>
             </div>
+            <div className='divider'>
+                <p></p>
+                <p>Or</p>
+                <p></p>
+            </div>
 
 
         </div>
