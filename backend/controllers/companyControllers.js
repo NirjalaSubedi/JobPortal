@@ -94,6 +94,7 @@ exports.updateCompany=async(req,res)=>{
 
 //delete company details
 exports.detelecompany=async (req,res)=>{
+    try{
     const companyid=req.params.id;
     const [result]= await db.execute("DELETE companies WHERE id=?",[companyid]);
     if(result.affectedRows===0){
@@ -106,4 +107,10 @@ exports.detelecompany=async (req,res)=>{
         success:true,
         message:"company deleted success"
     })
+    }catch(error){
+        res.status(500).json({
+            success:false,
+            error:error.message
+        })
+    }
 }
