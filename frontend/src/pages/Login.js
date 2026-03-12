@@ -26,6 +26,9 @@ const Login = ()=>{
                 <p>Or</p>
                 <p></p>
             </div>
+            <div className='signuptext'>
+                <p>Don't have an account? <span>SignUp</span></p>
+            </div>
 
 
         </div>
