@@ -64,7 +64,19 @@ exports.getsinglejob =async (req,res)=>{
 }
 exports.updatejob=async(req,res)=>{
     try{
-
+        const jobid=req.params.id;
+        const {title,category,description,company,location,salary}=req.body;
+        const [result]= await db.execute("UPDATE jobs SET title=?,category=?,description=?,company=?,location=?,salary=? WHERE id=?",[title,category,description,company,location,salary,jobid]);
+        if(result.affectedRows<0){
+             return res.status(404).json({
+                success:false,
+                message:"data update garna sakiyana"
+            })
+        }
+        res.status(200).json({
+            success:true,
+            message:"data update vayo"
+        })
     }catch(error){
         res.status(500).json({
             success:false,

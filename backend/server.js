@@ -12,6 +12,7 @@ const checkconnection= async()=>{
         console.log('connection success');
     }catch(e){
         console.log('database connection failed');
+        
     }
 
 };

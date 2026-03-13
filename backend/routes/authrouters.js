@@ -2,7 +2,7 @@ const express= require('express');
 const authmiddleware=require('../middlewares/authmiddlewares');
 const router=express.Router();
 const {userRegister,loginUser}= require('../controllers/authControllers');
-const {createJob,getalljobs,getsinglejob}=require('../controllers/jobControllers');
+const {createJob,getalljobs,getsinglejob,updatejob}=require('../controllers/jobControllers');
 const {createcompany,fetchcompany,fetchsinglecompany,updateCompany,detelecompany}=require('../controllers/companyControllers');
 
 router.post('/register', userRegister);
@@ -19,6 +19,7 @@ router.post('/debug-test', (req, res) => res.send("Route working!"));
 router.post('/create-job',authmiddleware,createJob);
 router.get('/getjobs',getalljobs);
 router.get('/getsinglejob/:id',getsinglejob);
+router.patch('/updatejob/:id',updatejob);
 
 //company api
 router.post('/createcompany',createcompany);
