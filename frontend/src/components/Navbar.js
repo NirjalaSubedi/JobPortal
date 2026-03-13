@@ -19,7 +19,6 @@ const Navbar = ()=>{
           Sajilo<span style={{ color: '#4ade80' }}>Rojgar</span>
         </Link>
       </div>
-
       <div style={{ display: 'flex', gap: '2rem' }}>
         {['Home', 'Jobs', 'Companies', 'About'].map((item) => (
           <Link key={item} to={`/${item.toLowerCase()}`} style={{
