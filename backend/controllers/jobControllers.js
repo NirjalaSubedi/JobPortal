@@ -62,3 +62,14 @@ exports.getsinglejob =async (req,res)=>{
         })
     }
 }
+exports.updatejob=async(req,res)=>{
+    try{
+
+    }catch(error){
+        res.status(500).json({
+            success:false,
+            message:" job update garna sakiyana",
+            error:error.message
+        })
+    }
+}
