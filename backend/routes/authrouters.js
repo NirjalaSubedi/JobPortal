@@ -2,7 +2,7 @@ const express= require('express');
 const authmiddleware=require('../middlewares/authmiddlewares');
 const router=express.Router();
 const {userRegister,loginUser}= require('../controllers/authControllers');
-const {createJob,getalljobs,getsinglejob,updatejob}=require('../controllers/jobControllers');
+const {createJob,getalljobs,getsinglejob,updatejob,deletejob}=require('../controllers/jobControllers');
 const {createcompany,fetchcompany,fetchsinglecompany,updateCompany,detelecompany}=require('../controllers/companyControllers');
 
 router.post('/register', userRegister);
@@ -20,6 +20,7 @@ router.post('/create-job',authmiddleware,createJob);
 router.get('/getjobs',getalljobs);
 router.get('/getsinglejob/:id',getsinglejob);
 router.patch('/updatejob/:id',updatejob);
+router.delete('/deletejob/:id',deletejob);
 
 //company api
 router.post('/createcompany',createcompany);

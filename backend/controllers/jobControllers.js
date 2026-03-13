@@ -62,6 +62,7 @@ exports.getsinglejob =async (req,res)=>{
         })
     }
 }
+//upadte job details
 exports.updatejob=async(req,res)=>{
     try{
         const jobid=req.params.id;
@@ -84,4 +85,19 @@ exports.updatejob=async(req,res)=>{
             error:error.message
         })
     }
+}
+//delete job details
+exports.deletejob=async(req,res)=>{
+    const jobid=req.params.id;
+    const [result]= await db.execute("DELETE FROM jobs Where id=?",[jobid]);
+    if(result.affectedRows<0){
+        return res.status(404).json({
+            success:false,
+            message:"jobs delete garna sakiyana"
+        })
+    }
+    res.status(200).json({
+        success:true,
+        message:"job delete success"
+    })
 }
