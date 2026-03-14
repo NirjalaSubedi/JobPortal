@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* अरु तपाइँको पुरानो CSS जस्ताको तस्तै रहन्छ */
 * {
   margin: 0;
   padding: 0;
