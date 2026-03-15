@@ -5,8 +5,9 @@ const Register = () => {
   const [role, setRole] = useState(null); 
 
   return (
-    <div>
-      <h1> SignUp As</h1>
+    <div className='flex flex-col items-center justify-center min-h-screen bg-slate-50 font-sans p-4'>
+      <h1>SajiloRojgar</h1>
+      <h3> SignUp As</h3>
     <div className='flex'>
       <div className=' flex flex-col items-center bg-green-100 p-4 m-4 border'>
         <User size={48} className="text-green-500 mb-4" />
