@@ -1,8 +1,13 @@
 import React, { useState } from 'react';
 
 const Register = () => {
-  const [step, setStep] = useState('select');
+  const [role, setRole] = useState(null); 
 
+  return (
+    <div>
+      
+    </div>
+  );
 };
 
 export default Register;
