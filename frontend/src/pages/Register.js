@@ -3,6 +3,7 @@ import { User, Building2 } from 'lucide-react';
 
 const Register = () => {
   const [role, setRole] = useState(null); 
+  
 
   return (
     <div className='flex flex-col items-center justify-center min-h-screen bg-slate-50 font-sans p-4'>
@@ -56,13 +57,14 @@ const Register = () => {
     <div>
       <label className='block text-sm font-semibold text-slate-700 mb-1' htmlFor="password">Password</label>
       <input type="password" name="password" placeholder="Create unique password"
-        className='text-left w-full p-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-green-500 outline-none transition-all'/>
+        className='checkpassword text-left w-full p-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-green-500 outline-none transition-all'/>
     </div>
 
     <div>
       <label className='block text-sm font-semibold text-slate-700 mb-1' htmlFor="confirmPassword">Confirm Password</label>
       <input type="password" name="confirmPassword" placeholder="Re-enter password"
-        className=' text-left w-full p-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-green-500 outline-none transition-all'/>
+        className='confirmpassword text-left w-full p-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-green-500 outline-none transition-all'/>
+      <p className='error-message'> </p>
     </div>
 
     <button type="submit" 
