@@ -3,7 +3,16 @@ import { User, Building2 } from 'lucide-react';
 
 const Register = () => {
   const [role, setRole] = useState(null); 
-  
+  //password matching logic
+  const [formdata, setformdata]=useState({
+        name:'',
+        email:'',
+        password:'',
+        confirmpassword:''
+  });
+
+  //settting error message usestate
+  const [error,seterror]=useState('')
 
   return (
     <div className='flex flex-col items-center justify-center min-h-screen bg-slate-50 font-sans p-4'>
@@ -62,9 +71,9 @@ const Register = () => {
 
     <div>
       <label className='block text-sm font-semibold text-slate-700 mb-1' htmlFor="confirmPassword">Confirm Password</label>
-      <input type="password" name="confirmPassword" placeholder="Re-enter password"
-        className='confirmpassword text-left w-full p-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-green-500 outline-none transition-all'/>
-      <p className='error-message'> </p>
+      <input type="password" name="confirmPassword" onChange={handleChange} placeholder="Re-enter password" 
+        className={`w-full p-2.5 border rounded-lg outline-none ${error ? 'border-red-500' : 'border-slate-300'}`}/>
+              {error && <p className='text-red-500 text-xs mt-1 font-medium'>{error}</p>}
     </div>
 
     <button type="submit" 
