@@ -50,19 +50,19 @@ const Register = () => {
     <div>
       <label className='block text-sm font-semibold text-slate-700 mb-1' htmlFor="email">Email</label>
       <input type="email" name="email" placeholder="example@gmail.com"
-        className='w-full p-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-green-500 outline-none transition-all'/>
+        className=' text-left w-full p-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-green-500 outline-none transition-all'/>
     </div>
 
     <div>
       <label className='block text-sm font-semibold text-slate-700 mb-1' htmlFor="password">Password</label>
       <input type="password" name="password" placeholder="Create unique password"
-        className='w-full p-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-green-500 outline-none transition-all'/>
+        className='text-left w-full p-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-green-500 outline-none transition-all'/>
     </div>
 
     <div>
       <label className='block text-sm font-semibold text-slate-700 mb-1' htmlFor="confirmPassword">Confirm Password</label>
       <input type="password" name="confirmPassword" placeholder="Re-enter password"
-        className='w-full p-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-green-500 outline-none transition-all'/>
+        className=' text-left w-full p-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-green-500 outline-none transition-all'/>
     </div>
 
     <button type="submit" 
