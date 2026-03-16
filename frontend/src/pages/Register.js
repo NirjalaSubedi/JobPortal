@@ -39,6 +39,14 @@ const Register = () => {
       ) : (
         <div className='bg-white p-10 rounded-2xl shadow-2xl text-center'>
           <h2 className='text-2xl font-bold'>Registering as {role}</h2>
+          <label for="name">Name</label>
+          <input type="text" name="name" placeholder='Enter your name'/>
+          <label for="email">email</label>
+          <input type="email" name="email" placeholder="example@gmail.com"></input>
+          <label for="password">password</label>
+          <input type="text" name="password" plceholder="create unique password"></input>
+          <label for="confirmPassword">Confirm Password</label>
+          <button type="submit" className='register-btn'>Register</button>
         </div>
       )}
 
