@@ -73,7 +73,7 @@ const Register = () => {
              name="name"
              placeholder='Enter your name'
              value={formdata.name}
-             onchange={handleChange}
+             onChange={handleChange}
              className='w-full p-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-green-500 outline-none transition-all'/>
     </div>
 
@@ -83,7 +83,7 @@ const Register = () => {
               name="email" 
               placeholder="example@gmail.com"
               value={formdata.email}
-              onchange={handleChange}
+              onChange={handleChange}
               className='w-full p-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-green-500 outline-none transition-all'
       />
     </div>
@@ -94,7 +94,7 @@ const Register = () => {
              name="password"
              placeholder="Create unique password"
              value={formdata.password}
-             onchange={handleChange}
+             onChange={handleChange}
              className='checkpassword text-left w-full p-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-green-500 outline-none transition-all'
       />
     </div>
@@ -102,9 +102,9 @@ const Register = () => {
     <div>
       <label className='block text-sm font-semibold text-slate-700 mb-1' htmlFor="confirmPassword">Confirm Password</label>
       <input type="password"
-             name="confirmPassword"
+             name="confirmpassword"
              value={formdata.confirmpassword}
-             onchange={handleChange}
+             onChange={handleChange}
              placeholder="Re-enter password" 
              className={`w-full p-2.5 border rounded-lg outline-none ${error ? 'border-red-500' : 'border-slate-300'}`}
       />
