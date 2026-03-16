@@ -12,7 +12,23 @@ const Register = () => {
   });
 
   //settting error message usestate
-  const [error,seterror]=useState('')
+  const [error,seterror]=useState('');
+
+  const handleChange = (e) => {
+    setformdata({ ...formdata, [e.target.name]: e.target.value });
+    seterror(''); // Change huda error message hatai dine
+  };
+
+  const handleSubmit =(e)=>{
+    e.preventDefault();
+    if (formdata.password !== formdata.confirmpassword) {
+      seterror("Passwords do not match!");
+    } else {
+      seterror("");
+      console.log("Form Submitted Successfully:", formdata);
+      
+    }
+  }
 
   return (
     <div className='flex flex-col items-center justify-center min-h-screen bg-slate-50 font-sans p-4'>
