@@ -9,7 +9,7 @@ const Register = () => {
       
       {!role ? (
         <>
-          <h1 className='text-4xl font-black text-slate-800 mb-2'>
+          <h1 className='text-4xl font-black  mb-2'>
             Sajilo<span className='text-green-600'>Rojgar</span>
           </h1>
           <h2 className='text-slate-500 font-medium mb-10'>SignUp As</h2>
