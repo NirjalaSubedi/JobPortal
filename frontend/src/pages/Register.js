@@ -9,7 +9,7 @@ const Register = () => {
       
       {!role ? (
         <>
-          <h1 className='text-4xl font-black  mb-2'>
+          <h1 className='text-4xl   mb-2'>
             Sajilo<span className='text-green-600'>Rojgar</span>
           </h1>
           <h2 className='text-slate-500 font-medium mb-10'>SignUp As</h2>
@@ -22,7 +22,7 @@ const Register = () => {
               <div className='bg-green-100 p-4 rounded-full mb-4'>
                 <User size={48} className="text-green-600" />
               </div>
-              <h1 className='text-green-600 text-xl font-bold'>Candidate</h1>
+              <h1 className='text-green-600 text-xl '>Candidate</h1>
             </div>
 
             <div 
@@ -32,7 +32,7 @@ const Register = () => {
               <div className='bg-red-100 p-4 rounded-full mb-4'>
                 <Building2 size={48} className="text-red-600" />
               </div>
-              <h1 className='text-red-600 text-xl font-bold'>Company</h1>
+              <h1 className='text-red-600 text-xl '>Company</h1>
             </div>
           </div>
         </>
