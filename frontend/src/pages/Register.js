@@ -42,7 +42,7 @@ const Register = () => {
 
           <div className='flex flex-col md:flex-row'>
             <div 
-              onClick={() => setRole('candidate')}
+              onClick={() => setRole('Candidate')}
               className='flex flex-col items-center bg-white p-10 m-4 border-2 border-transparent hover:border-green-500 rounded-[1rem] shadow-xl hover:shadow-2xl transition-all cursor-pointer w-64'
             >
               <div className='bg-green-100 p-4 rounded-full mb-4'>
@@ -52,7 +52,7 @@ const Register = () => {
             </div>
 
             <div 
-              onClick={() => setRole('company')} 
+              onClick={() => setRole('Company')} 
               className='flex flex-col items-center bg-white p-10 m-4 border-2 border-transparent hover:border-red-500 rounded-[1rem] shadow-xl hover:shadow-2xl transition-all cursor-pointer w-64'
             >
               <div className='bg-red-100 p-4 rounded-full mb-4'>
@@ -64,7 +64,7 @@ const Register = () => {
         </>
       ) : (
         <div className='bg-white p-10 rounded-2xl shadow-2xl text-center w-full max-w-md'>
-  <h2 className='text-2xl font-bold mb-6 text-slate-800'>Registering as {role}</h2>
+  <h2 className='text-2xl font-bold mb-6 text-slate-800'>Register As <span className='text-green-500'>{role}</span></h2>
   
   <form className='flex flex-col text-left gap-4' onSubmit={handleSubmit}>
     <div>
