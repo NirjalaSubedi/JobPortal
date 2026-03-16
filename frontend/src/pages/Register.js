@@ -37,17 +37,40 @@ const Register = () => {
           </div>
         </>
       ) : (
-        <div className='bg-white p-10 rounded-2xl shadow-2xl text-center'>
-          <h2 className='text-2xl font-bold'>Registering as {role}</h2>
-          <label for="name">Name</label>
-          <input type="text" name="name" placeholder='Enter your name'/>
-          <label for="email">email</label>
-          <input type="email" name="email" placeholder="example@gmail.com"></input>
-          <label for="password">password</label>
-          <input type="text" name="password" plceholder="create unique password"></input>
-          <label for="confirmPassword">Confirm Password</label>
-          <button type="submit" className='register-btn'>Register</button>
-        </div>
+        <div className='bg-white p-10 rounded-2xl shadow-2xl text-center w-full max-w-md'>
+  <h2 className='text-2xl font-bold mb-6 text-slate-800'>Registering as {role}</h2>
+  
+  <form className='flex flex-col text-left gap-4'>
+    <div>
+      <label className='block text-sm font-semibold text-slate-700 mb-1' htmlFor="name">Name</label>
+      <input type="text" name="name" placeholder='Enter your name'
+        className='w-full p-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-green-500 outline-none transition-all'/>
+    </div>
+
+    <div>
+      <label className='block text-sm font-semibold text-slate-700 mb-1' htmlFor="email">Email</label>
+      <input type="email" name="email" placeholder="example@gmail.com"
+        className='w-full p-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-green-500 outline-none transition-all'/>
+    </div>
+
+    <div>
+      <label className='block text-sm font-semibold text-slate-700 mb-1' htmlFor="password">Password</label>
+      <input type="password" name="password" placeholder="Create unique password"
+        className='w-full p-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-green-500 outline-none transition-all'/>
+    </div>
+
+    <div>
+      <label className='block text-sm font-semibold text-slate-700 mb-1' htmlFor="confirmPassword">Confirm Password</label>
+      <input type="password" name="confirmPassword" placeholder="Re-enter password"
+        className='w-full p-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-green-500 outline-none transition-all'/>
+    </div>
+
+    <button type="submit" 
+      className='mt-4 w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 rounded-lg shadow-lg transform transition-transform active:scale-95'>
+      Register
+    </button>
+  </form>
+</div>
       )}
 
     </div>
