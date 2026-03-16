@@ -64,7 +64,8 @@ const Register = () => {
         </>
       ) : (
         <div className='bg-white p-10 rounded-2xl shadow-2xl text-center w-full max-w-md'>
-  <h2 className='text-2xl font-bold mb-6 text-slate-800'>Register As <span className='text-green-500'>{role}</span></h2>
+  <h2 className='text-2xl font-bold mb-6 text-slate-800'>Register As  
+  <span className={role==='Company'?'text-red-500':'text-green-500'}>{role==='Candidate'?'Candidate':'Company'}</span></h2>
   
   <form className='flex flex-col text-left gap-4' onSubmit={handleSubmit}>
     <div>
@@ -112,7 +113,8 @@ const Register = () => {
     </div>
 
     <button type="submit" 
-      className='mt-4 w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 rounded-lg shadow-lg transform transition-transform active:scale-95'>
+      className={`mt-4 w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 rounded-lg shadow-lg transform transition-transform active:scale-95
+      ${role === 'Company' ? 'bg-red-600 hover:bg-red-700' : 'bg-green-600 hover:bg-green-700'}`}>
       Register
     </button>
   </form>
