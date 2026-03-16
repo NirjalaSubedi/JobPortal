@@ -66,29 +66,48 @@ const Register = () => {
         <div className='bg-white p-10 rounded-2xl shadow-2xl text-center w-full max-w-md'>
   <h2 className='text-2xl font-bold mb-6 text-slate-800'>Registering as {role}</h2>
   
-  <form className='flex flex-col text-left gap-4' onChange={handleSubmit}>
+  <form className='flex flex-col text-left gap-4' onSubmit={handleSubmit}>
     <div>
       <label className='block text-sm font-semibold text-slate-700 mb-1' htmlFor="name">Name</label>
-      <input type="text" name="name" placeholder='Enter your name' 
-        className='w-full p-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-green-500 outline-none transition-all'/>
+      <input type="text"
+             name="name"
+             placeholder='Enter your name'
+             value={formdata.name}
+             onchange={handleChange}
+             className='w-full p-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-green-500 outline-none transition-all'/>
     </div>
 
     <div>
       <label className='block text-sm font-semibold text-slate-700 mb-1' htmlFor="email">email</label>
-      <input type="email" name="email" placeholder="example@gmail.com"
-         className='w-full p-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-green-500 outline-none transition-all'/>
+      <input  type="email"
+              name="email" 
+              placeholder="example@gmail.com"
+              value={formdata.email}
+              onchange={handleChange}
+              className='w-full p-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-green-500 outline-none transition-all'
+      />
     </div>
 
     <div>
       <label className='block text-sm font-semibold text-slate-700 mb-1' htmlFor="password">Password</label>
-      <input type="password" name="password" placeholder="Create unique password"
-        className='checkpassword text-left w-full p-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-green-500 outline-none transition-all'/>
+      <input type="password"
+             name="password"
+             placeholder="Create unique password"
+             value={formdata.password}
+             onchange={handleChange}
+             className='checkpassword text-left w-full p-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-green-500 outline-none transition-all'
+      />
     </div>
 
     <div>
       <label className='block text-sm font-semibold text-slate-700 mb-1' htmlFor="confirmPassword">Confirm Password</label>
-      <input type="password" name="confirmPassword" onChange={handleChange} placeholder="Re-enter password" 
-        className={`w-full p-2.5 border rounded-lg outline-none ${error ? 'border-red-500' : 'border-slate-300'}`}/>
+      <input type="password"
+             name="confirmPassword"
+             value={formdata.confirmpassword}
+             onchange={handleChange}
+             placeholder="Re-enter password" 
+             className={`w-full p-2.5 border rounded-lg outline-none ${error ? 'border-red-500' : 'border-slate-300'}`}
+      />
               {error && <p className='text-red-500 text-xs mt-1 font-medium'>{error}</p>}
     </div>
 
