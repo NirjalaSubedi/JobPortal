@@ -97,10 +97,10 @@ const Register = () => {
              placeholder="enter you website url"
              value={formdata.website}
              onChange={handleChange}
-             className=' text-left w-full p-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-green-500 outline-none transition-all'
+             className=' text-left w-full p-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-red-500 outline-none transition-all'
       />  
-
     </div>
+
     <div>
       <label className='block text-sm font-semibold text-slate-700 mb-1' htmlFor="password">Password</label>
       <input type="password"
