@@ -7,6 +7,7 @@ const Register = () => {
   const [formdata, setformdata]=useState({
         name:'',
         email:'',
+        website:'',
         password:'',
         confirmpassword:''
   });
@@ -88,7 +89,18 @@ const Register = () => {
               className='w-full p-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-green-500 outline-none transition-all'
       />
     </div>
+    
+    <div className={`${role === 'Company'?'block':'hidden'}`}>
+      <label className='block text-sm font-semibold text-slate-700 mb-1' htmlFor="website">Website</label>
+      <input type="text"
+             name="website"
+             placeholder="enter you website url"
+             value={formdata.website}
+             onChange={handleChange}
+             className=' text-left w-full p-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-green-500 outline-none transition-all'
+      />  
 
+    </div>
     <div>
       <label className='block text-sm font-semibold text-slate-700 mb-1' htmlFor="password">Password</label>
       <input type="password"
@@ -96,7 +108,7 @@ const Register = () => {
              placeholder="Create unique password"
              value={formdata.password}
              onChange={handleChange}
-             className='checkpassword text-left w-full p-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-green-500 outline-none transition-all'
+             className='text-left w-full p-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-green-500 outline-none transition-all'
       />
     </div>
 
