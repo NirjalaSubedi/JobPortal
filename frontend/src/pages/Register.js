@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { User, Building2 } from 'lucide-react';
+import { MapContainer, TileLayer, Marker } from 'react-leaflet';
+import 'leaflet/dist/leaflet.css';
 
 const Register = () => {
   const [role, setRole] = useState(null); 
@@ -99,6 +101,16 @@ const Register = () => {
              onChange={handleChange}
              className=' text-left w-full p-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-red-500 outline-none transition-all'
       />  
+    </div>
+
+    <div className={`${role === 'Company'?'block':'hidden'}`}>
+      <div className="h-40 w-full rounded-lg overflow-hidden my-2 border border-slate-300">
+    <MapContainer center={[26.6646, 87.1755]} zoom={13} scrollWheelZoom={false} style={{ height: '100%', width: '100%' }}>
+      <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+      <Marker position={[26.6646, 87.1755]} />
+    </MapContainer>
+    <p className="text-[10px] text-slate-500 mt-1">* Click to pin company location</p>
+  </div>
     </div>
 
     <div>
