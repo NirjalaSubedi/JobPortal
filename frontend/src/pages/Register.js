@@ -14,7 +14,8 @@ const Register = () => {
         PANnumber:'',
         contactperson:'',
         password:'',
-        confirmpassword:''
+        confirmpassword:'',
+        description:''
   });
 
   //settting error message usestate
@@ -105,8 +106,7 @@ const Register = () => {
     </div>
 
     </div>
-    
-    <div className={`grid gap-4 mb-4 ${role === 'Company' ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-1'}`}>
+    <div className={`grid gap-4 ${role === 'Company' ? 'md:grid-cols-2' : 'grid-cols-1'}`}>
 
     <div className={`${role === 'Company'?'block':'hidden'}`}>
       <label className='block text-sm font-semibold text-slate-700 mb-1' htmlFor="companytype">Company Type</label>
@@ -135,7 +135,7 @@ const Register = () => {
     </div>
     </div>
 
-  <div className={`grid gap-4 mb-4 ${role === 'Company' ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-1'}`}>
+  <div className={`grid gap-4 ${role === 'Company' ? 'md:grid-cols-2' : 'grid-cols-1'}`}>
     <div className={`${role === 'Company'?'block':'hidden'}`}>
       <label className='block text-sm font-semibold text-slate-700 mb-1' htmlFor="PANnumber">PAN/VAT Number</label>
       <input type="text"
@@ -163,7 +163,7 @@ const Register = () => {
     </div>
     </div>
 
-  <div className={`grid gap-4 mb-4 ${role === 'Company' ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-1'}`}>
+  <div className={`grid gap-4 ${role === 'Company' ? 'md:grid-cols-2' : 'grid-cols-1'}`}>
     <div>
       <label className='block text-sm font-semibold text-slate-700 mb-1' htmlFor="password">Password</label>
       <input type="password"
