@@ -90,7 +90,9 @@ const Register = () => {
               placeholder="Example@gmail.com"
               value={formdata.email}
               onChange={handleChange}
-              className='w-full p-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-green-500 outline-none transition-all'
+              className={`w-full p-2.5 border rounded-lg focus:ring-2  outline-none transition-all
+                ${role === 'Company'?'border-slate-300 focus:ring-red-500 focus:border-red-500' 
+                :'border-slate-300 focus:ring-green-500 focus:border-green-500'}`}
       />
     </div>
     
