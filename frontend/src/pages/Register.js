@@ -76,7 +76,7 @@ const Register = () => {
          <span className={`${role ==='Company'?'inline':'hidden'}`}>Company </span>Name</label>
       <input type="text"
              name="name"
-             placeholder='Enter your name'
+             placeholder={role === 'Company'?'Enter Company name':'Enter your name'}
              value={formdata.name}
              onChange={handleChange}
              className='w-full p-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-green-500 outline-none transition-all'/>
