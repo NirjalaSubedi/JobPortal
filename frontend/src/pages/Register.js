@@ -134,15 +134,6 @@ const Register = () => {
     </div>
     </div>
 
-    <div className={`${role === 'Company'?'block':'hidden'}`}>
-      <div className="h-40 w-full rounded-lg overflow-hidden my-2 border border-slate-300">
-    <MapContainer center={[26.6646, 87.1755]} zoom={13} scrollWheelZoom={false} style={{ height: '100%', width: '100%' }}>
-      <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-      <Marker position={[26.6646, 87.1755]} />
-    </MapContainer>
-    <p className="text-[10px] text-slate-500 mt-1">* Click to pin company location</p>
-  </div>
-    </div>
   <div className={`grid gap-4 mb-4 ${role === 'Company' ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-1'}`}>
     <div className={`${role === 'Company'?'block':'hidden'}`}>
       <label className='block text-sm font-semibold text-slate-700 mb-1' htmlFor="PANnumber">PAN/VAT Number</label>
@@ -169,19 +160,6 @@ const Register = () => {
                 :'border-slate-300 focus:ring-green-500 focus:border-green-500'}`}
       />  
     </div>
-    </div>
-
-    <div className={`${role === 'Company'?'block':'hidden'}`}>
-      <label className='block text-sm font-semibold text-slate-700 mb-1' htmlFor="Description">Description</label>
-      <textarea type="text"
-             name="Description"
-             placeholder="Brief description About your company"
-             value={formdata.website}
-             onChange={handleChange}
-             className={`w-full p-2.5 border rounded-lg focus:ring-2  outline-none transition-all
-                ${role === 'Company'?'border-slate-300 focus:ring-red-500 focus:border-red-500' 
-                :'border-slate-300 focus:ring-green-500 focus:border-green-500'}`}
-      />
     </div>
 
   <div className={`grid gap-4 mb-4 ${role === 'Company' ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-1'}`}>
@@ -211,6 +189,29 @@ const Register = () => {
       />
               {error && <p className='text-red-500 text-xs mt-1 font-medium'>{error}</p>}
     </div>
+    </div>
+
+    <div className={`${role === 'Company'?'block':'hidden'}`}>
+      <div className="h-40 w-full rounded-lg overflow-hidden my-2 border border-slate-300">
+        <MapContainer center={[26.6646, 87.1755]} zoom={13} scrollWheelZoom={false} style={{ height: '100%', width: '100%' }}>
+          <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+          <Marker position={[26.6646, 87.1755]} />
+        </MapContainer>
+        <p className="text-[10px] text-slate-500 mt-1">* Click to pin company location</p>
+      </div>
+    </div>
+
+    <div className={`${role === 'Company'?'block':'hidden'}`}>
+      <label className='block text-sm font-semibold text-slate-700 mb-1' htmlFor="Description">Description</label>
+      <textarea type="text"
+             name="Description"
+             placeholder="Brief description About your company"
+             value={formdata.website}
+             onChange={handleChange}
+             className={`w-full p-2.5 border rounded-lg focus:ring-2  outline-none transition-all
+                ${role === 'Company'?'border-slate-300 focus:ring-red-500 focus:border-red-500' 
+                :'border-slate-300 focus:ring-green-500 focus:border-green-500'}`}
+      />
     </div>
 
     <button type="submit" 
