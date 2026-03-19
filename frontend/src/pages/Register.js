@@ -82,7 +82,8 @@ const Register = () => {
     </div>
 
     <div>
-      <label className='block text-sm font-semibold text-slate-700 mb-1' htmlFor="email">email</label>
+      <label className='block text-sm font-semibold text-slate-700 mb-1' htmlFor="email">
+        <span className={`${role ==='Company'?'block':'hidden'}`}>Offical </span>Email</label>
       <input  type="email"
               name="email" 
               placeholder="example@gmail.com"
