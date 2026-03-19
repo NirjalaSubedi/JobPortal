@@ -10,6 +10,7 @@ const Register = () => {
         name:'',
         email:'',
         website:'',
+        companytype:'',
         password:'',
         confirmpassword:''
   });
@@ -105,6 +106,19 @@ const Register = () => {
              name="website"
              placeholder="Enter your company website url"
              value={formdata.website}
+             onChange={handleChange}
+             className={`w-full p-2.5 border rounded-lg focus:ring-2  outline-none transition-all
+                ${role === 'Company'?'border-slate-300 focus:ring-red-500 focus:border-red-500' 
+                :'border-slate-300 focus:ring-green-500 focus:border-green-500'}`}
+      />  
+    </div>
+
+    <div className={`${role === 'Company'?'block':'hidden'}`}>
+      <label className='block text-sm font-semibold text-slate-700 mb-1' htmlFor="companytype">Company Type</label>
+      <input type="text"
+             name="companytype"
+             placeholder="Enter your Company Type"
+             value={formdata.companytype}
              onChange={handleChange}
              className={`w-full p-2.5 border rounded-lg focus:ring-2  outline-none transition-all
                 ${role === 'Company'?'border-slate-300 focus:ring-red-500 focus:border-red-500' 
