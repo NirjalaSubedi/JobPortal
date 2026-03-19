@@ -12,6 +12,7 @@ const Register = () => {
         website:'',
         companytype:'',
         PANnumber:'',
+        contactperson:'',
         password:'',
         confirmpassword:''
   });
@@ -142,7 +143,7 @@ const Register = () => {
     <p className="text-[10px] text-slate-500 mt-1">* Click to pin company location</p>
   </div>
     </div>
-
+  <div className={`grid gap-4 mb-4 ${role === 'Company' ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-1'}`}>
     <div className={`${role === 'Company'?'block':'hidden'}`}>
       <label className='block text-sm font-semibold text-slate-700 mb-1' htmlFor="PANnumber">PAN/VAT Number</label>
       <input type="text"
@@ -154,6 +155,20 @@ const Register = () => {
                 ${role === 'Company'?'border-slate-300 focus:ring-red-500 focus:border-red-500' 
                 :'border-slate-300 focus:ring-green-500 focus:border-green-500'}`}
       />  
+    </div>
+
+    <div className={`${role === 'Company'?'block':'hidden'}`}>
+      <label className='block text-sm font-semibold text-slate-700 mb-1' htmlFor="contactperson">Contact Person Phone Number</label>
+      <input type="text"
+             name="contactperson"
+             placeholder="HR or Company landline number"
+             value={formdata.contactperson}
+             onChange={handleChange}
+             className={`w-full p-2.5 border rounded-lg focus:ring-2  outline-none transition-all
+                ${role === 'Company'?'border-slate-300 focus:ring-red-500 focus:border-red-500' 
+                :'border-slate-300 focus:ring-green-500 focus:border-green-500'}`}
+      />  
+    </div>
     </div>
 
     <div className={`${role === 'Company'?'block':'hidden'}`}>
@@ -169,7 +184,7 @@ const Register = () => {
       />
     </div>
 
-
+  <div className={`grid gap-4 mb-4 ${role === 'Company' ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-1'}`}>
     <div>
       <label className='block text-sm font-semibold text-slate-700 mb-1' htmlFor="password">Password</label>
       <input type="password"
@@ -195,6 +210,7 @@ const Register = () => {
                 :'border-slate-300 focus:ring-green-500 focus:border-green-500'}`}
       />
               {error && <p className='text-red-500 text-xs mt-1 font-medium'>{error}</p>}
+    </div>
     </div>
 
     <button type="submit" 
