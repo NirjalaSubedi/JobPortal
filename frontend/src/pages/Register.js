@@ -69,7 +69,8 @@ const Register = () => {
           </div>
         </>
       ) : (
-        <div className='bg-white p-10 rounded-2xl shadow-2xl text-center w-full max-w-md'>
+        <div className={`bg-white p-10 rounded-2xl shadow-2xl text-center w-full transition-all duration-500 ${
+                        role === 'Company' ? 'max-w-3xl' : 'max-w-md'}`}>
           <h2 className='text-2xl font-bold mb-6 text-slate-800'>Register As  
           <span className={role==='Company'?'text-red-500':'text-green-500'}>{role==='Candidate'?'Candidate':'Company'}</span></h2>
   
@@ -149,7 +150,7 @@ const Register = () => {
     </div>
 
     <div className={`${role === 'Company'?'block':'hidden'}`}>
-      <label className='block text-sm font-semibold text-slate-700 mb-1' htmlFor="contactperson">Contact Person Phone Number</label>
+      <label className='block text-sm font-semibold text-slate-700 mb-1' htmlFor="contactperson">Contact Number</label>
       <input type="text"
              name="contactperson"
              placeholder="HR or Company landline number"
@@ -205,8 +206,9 @@ const Register = () => {
       <label className='block text-sm font-semibold text-slate-700 mb-1' htmlFor="Description">Description</label>
       <textarea type="text"
              name="Description"
+             rows="4"
              placeholder="Brief description About your company"
-             value={formdata.website}
+             value={formdata.description}
              onChange={handleChange}
              className={`w-full p-2.5 border rounded-lg focus:ring-2  outline-none transition-all
                 ${role === 'Company'?'border-slate-300 focus:ring-red-500 focus:border-red-500' 
