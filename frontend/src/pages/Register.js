@@ -150,7 +150,7 @@ const Register = () => {
 
     <div className={`${role === 'Company'?'block':'hidden'}`}>
       <label className='block text-sm font-semibold text-slate-700 mb-1' htmlFor="Description">Description</label>
-      <input type="text"
+      <textarea type="text"
              name="Description"
              placeholder="Brief description About your company"
              value={formdata.website}
