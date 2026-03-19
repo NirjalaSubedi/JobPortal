@@ -11,6 +11,7 @@ const Register = () => {
         email:'',
         website:'',
         companytype:'',
+        PANnumber:'',
         password:'',
         confirmpassword:''
   });
@@ -137,6 +138,17 @@ const Register = () => {
     </div>
 
     <div className={`${role === 'Company'?'block':'hidden'}`}>
+      <label className='block text-sm font-semibold text-slate-700 mb-1' htmlFor="PANnumber">PAN/VAT Number</label>
+      <input type="text"
+             name="PANnumber"
+             placeholder="Enter your Company PAN/VAT Number"
+             value={formdata.PANnumber}
+             onChange={handleChange}
+             className=' text-left w-full p-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-red-500 outline-none transition-all'
+      />  
+    </div>
+
+    <div className={`${role === 'Company'?'block':'hidden'}`}>
       <label className='block text-sm font-semibold text-slate-700 mb-1' htmlFor="Description">Description</label>
       <input type="text"
              name="Description"
@@ -146,6 +158,7 @@ const Register = () => {
              className=' text-left w-full p-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-red-500 outline-none transition-all'
       />  
     </div>
+
 
     <div>
       <label className='block text-sm font-semibold text-slate-700 mb-1' htmlFor="password">Password</label>
