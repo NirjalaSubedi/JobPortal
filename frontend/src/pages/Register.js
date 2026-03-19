@@ -144,7 +144,9 @@ const Register = () => {
              placeholder="Enter your Company PAN/VAT Number"
              value={formdata.PANnumber}
              onChange={handleChange}
-             className=' text-left w-full p-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-red-500 outline-none transition-all'
+             className={`w-full p-2.5 border rounded-lg focus:ring-2  outline-none transition-all
+                ${role === 'Company'?'border-slate-300 focus:ring-red-500 focus:border-red-500' 
+                :'border-slate-300 focus:ring-green-500 focus:border-green-500'}`}
       />  
     </div>
 
@@ -155,8 +157,10 @@ const Register = () => {
              placeholder="Brief description About your company"
              value={formdata.website}
              onChange={handleChange}
-             className=' text-left w-full p-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-red-500 outline-none transition-all'
-      />  
+             className={`w-full p-2.5 border rounded-lg focus:ring-2  outline-none transition-all
+                ${role === 'Company'?'border-slate-300 focus:ring-red-500 focus:border-red-500' 
+                :'border-slate-300 focus:ring-green-500 focus:border-green-500'}`}
+      />
     </div>
 
 
@@ -167,7 +171,9 @@ const Register = () => {
              placeholder="Create unique password"
              value={formdata.password}
              onChange={handleChange}
-             className='text-left w-full p-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-green-500 outline-none transition-all'
+             className={`w-full p-2.5 border rounded-lg focus:ring-2  outline-none transition-all
+                ${role === 'Company'?'border-slate-300 focus:ring-red-500 focus:border-red-500' 
+                :'border-slate-300 focus:ring-green-500 focus:border-green-500'}`}
       />
     </div>
 
@@ -178,7 +184,9 @@ const Register = () => {
              value={formdata.confirmpassword}
              onChange={handleChange}
              placeholder="Re-enter password" 
-             className={`w-full p-2.5 border rounded-lg outline-none ${error ? 'border-red-500' : 'border-slate-300'}`}
+             className={`w-full p-2.5 border rounded-lg focus:ring-2  outline-none transition-all
+                ${role === 'Company'?'border-slate-300 focus:ring-red-500 focus:border-red-500' 
+                :'border-slate-300 focus:ring-green-500 focus:border-green-500'}`}
       />
               {error && <p className='text-red-500 text-xs mt-1 font-medium'>{error}</p>}
     </div>
