@@ -73,10 +73,11 @@ const Register = () => {
   <span className={role==='Company'?'text-red-500':'text-green-500'}>{role==='Candidate'?'Candidate':'Company'}</span></h2>
   
   <form className='flex flex-col text-left gap-4' onSubmit={handleSubmit}>
-    <div>
-      <label className='block text-sm font-semibold text-slate-700 mb-1' htmlFor="name">
-         <span className={`${role ==='Company'?'inline':'hidden'}`}>Company </span>Name</label>
-      <input type="text"
+    <div className={`grid gap-4 mb-4 ${role === 'Company' ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-1'}`}>
+      <div>
+        <label className='block text-sm font-semibold text-slate-700 mb-1' htmlFor="name">
+        <span className={`${role ==='Company'?'inline':'hidden'}`}>Company </span>Name</label>
+        <input type="text"
              name="name"
              placeholder={role === 'Company'?'Enter Company name':'Enter your name'}
              value={formdata.name}
@@ -84,7 +85,7 @@ const Register = () => {
              className={`w-full p-2.5 border rounded-lg focus:ring-2  outline-none transition-all
                 ${role === 'Company'?'border-slate-300 focus:ring-red-500 focus:border-red-500' 
                 :'border-slate-300 focus:ring-green-500 focus:border-green-500'}`}
-      />
+        />
     </div>
 
     <div>
@@ -99,6 +100,8 @@ const Register = () => {
                 ${role === 'Company'?'border-slate-300 focus:ring-red-500 focus:border-red-500' 
                 :'border-slate-300 focus:ring-green-500 focus:border-green-500'}`}
       />
+    </div>
+
     </div>
     
     <div className={`${role === 'Company'?'block':'hidden'}`}>
