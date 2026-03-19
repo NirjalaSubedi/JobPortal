@@ -72,7 +72,8 @@ const Register = () => {
   
   <form className='flex flex-col text-left gap-4' onSubmit={handleSubmit}>
     <div>
-      <label className='block text-sm font-semibold text-slate-700 mb-1' htmlFor="name">Name</label>
+      <label className='block text-sm font-semibold text-slate-700 mb-1' htmlFor="name">
+         <span className={`${role ==='Company'?'inline':'hidden'}`}>Company </span>Name</label>
       <input type="text"
              name="name"
              placeholder='Enter your name'
