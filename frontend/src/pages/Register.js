@@ -87,7 +87,7 @@ const Register = () => {
         <span className={`${role ==='Company'?'inline':'hidden'}`}>Offical </span>Email</label>
       <input  type="email"
               name="email" 
-              placeholder="example@gmail.com"
+              placeholder="Example@gmail.com"
               value={formdata.email}
               onChange={handleChange}
               className='w-full p-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-green-500 outline-none transition-all'
@@ -98,7 +98,7 @@ const Register = () => {
       <label className='block text-sm font-semibold text-slate-700 mb-1' htmlFor="website">Website</label>
       <input type="text"
              name="website"
-             placeholder="enter you website url"
+             placeholder="Enter your company website url"
              value={formdata.website}
              onChange={handleChange}
              className=' text-left w-full p-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-red-500 outline-none transition-all'
