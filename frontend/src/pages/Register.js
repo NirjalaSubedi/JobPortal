@@ -70,12 +70,12 @@ const Register = () => {
         </>
       ) : (
         <div className='bg-white p-10 rounded-2xl shadow-2xl text-center w-full max-w-md'>
-  <h2 className='text-2xl font-bold mb-6 text-slate-800'>Register As  
-  <span className={role==='Company'?'text-red-500':'text-green-500'}>{role==='Candidate'?'Candidate':'Company'}</span></h2>
+          <h2 className='text-2xl font-bold mb-6 text-slate-800'>Register As  
+          <span className={role==='Company'?'text-red-500':'text-green-500'}>{role==='Candidate'?'Candidate':'Company'}</span></h2>
   
-  <form className='flex flex-col text-left gap-4' onSubmit={handleSubmit}>
-    <div className={`grid gap-4 mb-4 ${role === 'Company' ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-1'}`}>
-      <div>
+        <form className='flex flex-col text-left gap-4' onSubmit={handleSubmit}>
+        <div className={`grid gap-4 mb-4 ${role === 'Company' ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-1'}`}>
+        <div>
         <label className='block text-sm font-semibold text-slate-700 mb-1' htmlFor="name">
         <span className={`${role ==='Company'?'inline':'hidden'}`}>Company </span>Name</label>
         <input type="text"
